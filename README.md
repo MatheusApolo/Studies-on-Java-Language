@@ -1,1 +1,1 @@
-Simple program for adding and removing a String from an ArrayList.
+Simple programs for study and development in Java.
