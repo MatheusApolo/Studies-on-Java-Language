@@ -1,7 +1,7 @@
 import java.util.Scanner;
 import java.util.ArrayList;
 
-public class Arraylist {
+public class ArrayList {
     public static final String ANSI_RESET = "\u001B[0m";
     public static final String ANSI_GREEN = "\u001B[32m";
     public static final String ANSI_RED = "\u001B[31m";
@@ -9,7 +9,9 @@ public class Arraylist {
         Scanner scan = new Scanner(System.in);
         ArrayList<String> nomes = new ArrayList<>();
 
+        int i;
         int escolha = 0;
+        int names = -1;
 
         while(escolha != 4) {
 
@@ -27,14 +29,16 @@ public class Arraylist {
                 nomes.add(scan.nextLine());
 
                 System.out.println(ANSI_GREEN + "\nNome adicionado com sucesso\n" + ANSI_RESET);
+                names++;
             }
 
 
             if(escolha == 2) {
-                System.out.println("\nQual nome deseja remover? \n");
 
-                System.out.println(nomes + "\n");
-
+                for (i = 0; i <= names; i++) {
+                    System.out.println("- " + nomes.get(i));
+                }
+                System.out.println("\nQual nome deseja remover? \n\n");
                 String nome = scan.nextLine();
 
                 if (nomes.remove(nome)) {
@@ -43,12 +47,13 @@ public class Arraylist {
                     System.out.println(ANSI_RED + "\nNome não encontrado!\n" + ANSI_RESET);
                 }
             }
-
             if(escolha == 3) {
-                System.out.println("\nNomes Registrados:\n");
-                System.out.println(nomes + "\n\n");
+                System.out.println("\n===NOMES REGISTRADOS===\n");
+                for (i = 0; i <= names; i++) {
+                    System.out.println("- " + nomes.get(i));
+                }
+                System.out.print("\n");
             }
-
             if(escolha == 4) {
                 System.out.println("Tchau");
             }
