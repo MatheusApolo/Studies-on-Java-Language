@@ -81,5 +81,4 @@ Aqui compartilho minha prática diária, evolução na linguagem Java e experime
 Matheus Apolo
 
 🌐 Portfolio: https://matheusapolo.github.io  
-💼 LinkedIn: https://linkedin.com/in/matheus-de-castro-b6069440b
 ```
